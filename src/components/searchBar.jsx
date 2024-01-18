@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ImageSearch from "./imageSearch"
+import SearchResultPage from "../mainPages/searchResultPage"
 
 const SearchBar = () => {
     const [query, setQuery] = useState("")
@@ -19,6 +20,7 @@ const SearchBar = () => {
                             placeholder='Search For Images'
                             className=' bg-zinc-300 bg-opacity-55 text-gray-800 outline-none pl-2 pr-12 py-4 w-96'
                         />
+                        
                         <button onClick={() => { ImageSearch({ query, setQuery }) }} className=' text-white pl-3 py-3 rounded-md hover:text-black'>
                             Search
                         </button>

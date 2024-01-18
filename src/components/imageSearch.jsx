@@ -9,7 +9,7 @@ const ImageSearch = async ({ query, setQuery }) => {
         }
         const data = await response.json();
         // Handle the data returned from the API
-        console.log(data);
+        console.log(data.hits);
   };
   
   export default ImageSearch;
