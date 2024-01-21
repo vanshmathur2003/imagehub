@@ -4,7 +4,7 @@ const ImageCard = ({ image }) => {
   // const tags = image.tags.split(',');
   console.log(image)
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white mx-auto ">
       <img src={image.webformatURL} alt="" className="w-full" />
       <div className="px-6 py-4">
         <div className="font-bold text-purple-500 mb-2">
@@ -25,7 +25,12 @@ const ImageCard = ({ image }) => {
           </li>
           <li>
             <button onClick={() => window.location.href = image.previewURL} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-3">
-              Free Download
+              Download Preview
+            </button>
+          </li>
+          <li>
+            <button onClick={() => window.location.href = image.largeImageURL} className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-3">
+              Free HD Download
             </button>
           </li>
         </ul>
