@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import ImageCard from '../components/imageCard.jsx'
 import SearchBar from '../components/searchBar.jsx'
+import ButtonSugg from '../components/buttonSugg.jsx'
 const API = import.meta.env.VITE_API_KEY
 
 
@@ -33,6 +34,7 @@ const App = () => {
       </div>
       <div className="container mx-auto" >
         <SearchBar searchText={(text) => setTerm(text)} />
+        <ButtonSugg setTerm={setTerm} />
         {!isLoading && images.length === 0 && <h1 className="text-5xl text-center mx-auto mt-32">No Images Found</h1>}
         {
           isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> :
