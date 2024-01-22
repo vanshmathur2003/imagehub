@@ -18,7 +18,7 @@ const Footer = () => {
             >
               LinkedIn
             </button> */}
-          </div>
+          </div> 
         </div>
       </div>
     </footer>
